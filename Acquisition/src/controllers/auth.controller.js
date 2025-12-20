@@ -3,8 +3,8 @@
 import logger from '../config/logger.js';
 import { formatValidationError } from '../utils/format.js';
 import { signupSchema } from '../validations/auth.validation.js';
-// import { createUser } from '../services/user.service.js';
-// import jwt from 'jsonwebtoken';
+import { createUser } from '../services/auth.service.js';
+import jwt from 'jsonwebtoken';
 
 export const signup = async (req, res, next) => {
   try {
@@ -17,19 +17,19 @@ export const signup = async (req, res, next) => {
       });
     }
 
-    const { name, email,  role } = validationResult.data;
+    const { name, email, password, role } = validationResult.data;
 
-    // Later:
-    // const user = await createUser({ name, email, password, role });
-    // const token = jwt.sign(
-    //   {
-    //     id: user.id,
-    //     email: user.email,
-    //     role: user.role,
-    //   },
-    //   process.env.JWT_SECRET || 'change_this_secret',
-    //   { expiresIn: '1h' }
-    // );
+    // auth.service.js
+    const user = await createUser({ name, email, password, role });
+    const token = jwt.sign(
+      {
+        id: user.id,
+        email: user.email,
+        role: user.role,
+      },
+      process.env.JWT_SECRET || 'change_this_secret',
+      { expiresIn: '1h' }
+    );
 
     logger.info(`User registered successfully: ${email}`);
 
@@ -37,10 +37,10 @@ export const signup = async (req, res, next) => {
     res.status(201).json({
       message: 'User registered (stub)',
       user: {
-        id: 1,
-        name,
-        email,
-        role,
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
       },
     });
   } catch (e) {
