@@ -1,2 +1,0 @@
-{"level":"error","message":"Error authenticating user: Error: Invalid password","service":"acquisition-API","timestamp":"2025-12-20 18:50:21"}
-{"level":"error","message":"Sign in error Invalid password","service":"acquisition-API","stack":"Error: Invalid password\n    at authenticateUser (file:///Users/ismail/Devops01_Acquisition/Acquisition/src/services/auth.service.js:76:13)\n    at async signIn (file:///Users/ismail/Devops01_Acquisition/Acquisition/src/controllers/auth.controller.js:67:18)","timestamp":"2025-12-20 18:50:21"}

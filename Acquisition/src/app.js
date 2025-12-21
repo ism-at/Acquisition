@@ -6,8 +6,12 @@ import morgan from 'morgan';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import authRoutes from './routes/auth.routes.js';
+import securityMiddleware from './middleware/security.middleware.js';
 
 const app = express();
+
+// Use security middle from arject
+app.use(securityMiddleware);
 
 // Add security-related HTTP headers
 app.use(helmet());

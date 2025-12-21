@@ -91,3 +91,14 @@
 {"level":"info","message":"::ffff:127.0.0.1 - - [20/Dec/2025:17:50:33 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisition-API","timestamp":"2025-12-20 18:50:33"}
 {"level":"info","message":"User signed out successfully","service":"acquisition-API","timestamp":"2025-12-20 18:50:40"}
 {"level":"info","message":"::ffff:127.0.0.1 - - [20/Dec/2025:17:50:40 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 42 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisition-API","timestamp":"2025-12-20 18:50:40"}
+{"level":"info","message":"Server is initializing...","service":"acquisition-API","timestamp":"2025-12-21 12:59:49"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Dec/2025:11:59:52 +0000] \"GET / HTTP/1.1\" 200 24 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:146.0) Gecko/20100101 Firefox/146.0\"","service":"acquisition-API","timestamp":"2025-12-21 12:59:52"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Dec/2025:11:59:52 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:146.0) Gecko/20100101 Firefox/146.0\"","service":"acquisition-API","timestamp":"2025-12-21 12:59:52"}
+{"level":"error","message":"Error authenticating user: Error: Invalid password","service":"acquisition-API","timestamp":"2025-12-21 13:00:50"}
+{"level":"error","message":"Sign in error Invalid password","service":"acquisition-API","stack":"Error: Invalid password\n    at authenticateUser (file:///Users/ismail/Devops01_Acquisition/Acquisition/src/services/auth.service.js:76:13)\n    at async signIn (file:///Users/ismail/Devops01_Acquisition/Acquisition/src/controllers/auth.controller.js:67:18)","timestamp":"2025-12-21 13:00:50"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [21/Dec/2025:12:00:50 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 401 31 \"-\" \"PostmanRuntime/7.51.0\"","service":"acquisition-API","timestamp":"2025-12-21 13:00:50"}
+{"level":"info","message":"Server is initializing...","service":"acquisition-API","timestamp":"2025-12-21 13:47:46"}
+{"level":"info","message":"Server is initializing...","service":"acquisition-API","timestamp":"2025-12-21 13:47:55"}
+{"level":"info","message":"Server is initializing...","service":"acquisition-API","timestamp":"2025-12-21 13:48:02"}
+{"level":"info","message":"Server is initializing...","service":"acquisition-API","timestamp":"2025-12-21 13:48:03"}
+{"level":"info","message":"Server is initializing...","service":"acquisition-API","timestamp":"2025-12-21 13:48:04"}
